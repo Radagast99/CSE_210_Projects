@@ -1,0 +1,9 @@
+//Intructions:
+Now that you have learned about the principle of abstraction, 
+and designed and developed a program using it, return to I-Learn 
+and answer the following question (the way you would in a job interview)
+
+// Question to answer.
+What is abstraction and why is it important?
+
+// Answer development.
