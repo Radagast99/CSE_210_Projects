@@ -1,0 +1,25 @@
+Intructions 
+Now that you have learned about the principle of version control and practiced using Git and GitHub, 
+answer the following question (the way you would in a job interview):
+
+
+// Question to answer.
+What is version control and why is it important?
+
+
+// Answer development.
+A version control is how developers can work across teams or with their team while creating a program. 
+This allows developers to know the changes that are made in the program and who made them. 
+
+An important part of the version control is that makes the team to have a history of their work and 
+gives the required visibility to all, to better know how to help across, making this a great benefit for 
+the program users or requestors, becuase based on the feedback a feature that maybe was deleted can be 
+restore with the previous versions and all will know in what version was that feature in, doing things more agile
+that makes an impact to the business's productivity in a good way, and when productivity is rised the company or project
+is more beneficiated by it.
+
+For version control the most used one is Git that gives the several options to update the project's repository which
+is the compilated of folders and files that are worked across the team to organized the different codes and program features.
+Git has the GUI (Graphical User Interface) and the CMD or Bash options that are based on a command line prompter.
+Those last too are use with commands for example the "git clone" that takes from the web based repository with all 
+the folders and files organization on GitHub and makes an on-premises copy.
