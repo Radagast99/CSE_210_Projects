@@ -7,3 +7,39 @@ and answer the following question (the way you would in a job interview)
 What is abstraction and why is it important?
 
 // Answer development.
+Abstractions is something humans have been doing to make thing simpler for the user and learners. 
+Consists in hiding complex ideas and processes to make it more readable and understandable
+to someone is not related to the specific field of that idea or process and enables them to use it
+in their daily basis. making this a benefit to a better life quality to mankind.
+
+Abstraction in a way can be compare as a movie or TV show. The work that is made behind the scene
+like the scripts, makeup, cameras, lights, scenography, video edition, actors trying to personified
+their characters and bringing them to live is not watch by the viewer. The Job of the viewer is not 
+related to understable the behind the scenes but just to understand the movie and plot and enjoy it.
+
+In programming we do the same as by following the requirements to program with classes which enables 
+the programmer to filter what is really important to the user. For example the folliwing code is what 
+a user needs to fulfill for their resume:
+        Job job1 = new Job();
+        job1._jobTitle = "Software Engineer";
+        job1._company = "Microsoft";
+        job1._startYear = "2019";
+        job1._endYear = "2022";
+
+But what really compiles all that information and show it back to them with a specific format is the following code:
+    public class Job 
+    {
+        public string _jobTitle = "";
+        public string _company = "";
+        public string _startYear = "";
+        public string _endYear = "";
+
+        public Job ()
+        {
+        }
+
+        public void Display()
+        {
+            Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
+        }
+    }
