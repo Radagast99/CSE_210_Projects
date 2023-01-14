@@ -22,18 +22,20 @@ class Program
             Console.Write("What would you like to do? ");
             userChoice = int.Parse(Console.ReadLine());
 
-            // calling all the classes
-            Entry newEntry = new Entry();
-            Prompt newPrompt = new Prompt();
-            Journal userInput = new Journal();
+            // calling Journal class
+            Journal userJournal = new Journal();
             //Based on conditions we need to process what he wants to do.
             if (userChoice == 1)
             {
-                userInput.Write();
-                    
-            } else if (userChoice == 2)
+                userJournal.Write();   
+            } 
+            else if (userChoice == 2)
             { 
-
+                userJournal.Display();
+            }
+            else if (userChoice == 3) 
+            {
+                
             }
         }while(userChoice != 7);
     }

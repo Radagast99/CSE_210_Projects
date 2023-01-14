@@ -20,15 +20,22 @@ public void Write()
     string promptAndAnswer = newEntry.StoringEntry(promptToEntry, answerToEntry);
 }
 
+public void Display()
+{
+    Console.WriteLine($"{_entries}");
+}
 public void SaveToFile()
 {   
     Console.WriteLine("What is the file name?");
     _file= Console.ReadLine();
     using (StreamWriter writeToFile = new StreamWriter(_file))
     {   
-       
         foreach (Entry entry in _entries)
-        writeToFile.WriteLine(_entries);
+        {
+            writeToFile.WriteLine(_entries);
+            Console.WriteLine("");
+        }
+            
     }
 
 }
