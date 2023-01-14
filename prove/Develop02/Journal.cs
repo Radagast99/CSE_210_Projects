@@ -39,7 +39,6 @@ public void LoadToFile()
             string lastName = separatingArray[1];
         }
     }
-}
 
 public void SaveToFile()
 {   
