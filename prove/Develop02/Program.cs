@@ -35,7 +35,11 @@ class Program
             }
             else if (userChoice == 3) 
             {
-                
+                userJournal.LoadToFile();
+            }
+            else if (userChoice == 4)
+            {
+                userJournal.SaveToFile();
             }
         }while(userChoice != 7);
     }

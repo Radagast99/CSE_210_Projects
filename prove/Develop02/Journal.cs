@@ -11,6 +11,7 @@ public Journal()
 
 Entry newEntry = new Entry();
 Prompt newPrompt = new Prompt();
+
 public void Write() 
 {   
     // calling the random prompt for the user to answer
@@ -24,6 +25,28 @@ public void Display()
 {
     Console.WriteLine($"{_entries}");
 }
+
+public void LoadToFile()
+{
+    try 
+    {
+        Console.WriteLine("What is the file name?");
+        _file = Console.ReadLine();
+        string[] readingFile = System.IO.File.ReadAllLines(_file);
+
+        foreach (string line in readingFile)
+        {
+            string[] separatingArray = line.Split(",");
+            string firstName = separatingArray[0];
+            string lastName = separatingArray[1];
+        }
+    } 
+    catch (Exception fileNotFound)
+    {
+        Console.Write("File is not found. Please select 4. Save to create one.");
+    }
+}
+
 public void SaveToFile()
 {   
     Console.WriteLine("What is the file name?");
@@ -35,24 +58,17 @@ public void SaveToFile()
             writeToFile.WriteLine(_entries);
             Console.WriteLine("");
         }
-            
     }
-
 }
 
-public void LoadToFile()
-{
+//public void EditFromFile()
+//{
     
-}
+//}
 
-public void EditFromFile()
-{
+//public void DeleteFromFile()
+//{
     
-}
-
-public void DeleteFromFile()
-{
-    
-}
+//}
 }
 
