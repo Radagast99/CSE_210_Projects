@@ -27,8 +27,6 @@ public void Display()
 }
 
 public void LoadToFile()
-{
-    try 
     {
         Console.WriteLine("What is the file name?");
         _file = Console.ReadLine();
@@ -40,10 +38,6 @@ public void LoadToFile()
             string firstName = separatingArray[0];
             string lastName = separatingArray[1];
         }
-    } 
-    catch (Exception fileNotFound)
-    {
-        Console.Write("File is not found. Please select 4. Save to create one.");
     }
 }
 
