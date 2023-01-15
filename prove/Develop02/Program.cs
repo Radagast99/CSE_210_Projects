@@ -24,14 +24,21 @@ class Program
 
             // calling Journal class
             Journal userJournal = new Journal();
+            Entry newEntry = new Entry();
+            Prompt newPrompt = new Prompt();
+            
             //Based on conditions we need to process what he wants to do.
             if (userChoice == 1)
             {
-                userJournal.Write();   
+                foreach (Entry entry in userJournal._entries)
+                {
+                    string promptAndAnswer = userJournal.Write(newEntry, newPrompt); 
+                }
+                
             } 
             else if (userChoice == 2)
             { 
-                userJournal.Display();
+                userJournal._entries.Add(newEntry);
             }
             else if (userChoice == 3) 
             {

@@ -9,21 +9,27 @@ public Journal()
 {
 }
 
-Entry newEntry = new Entry();
-Prompt newPrompt = new Prompt();
 
-public void Write() 
+
+public string Write(Entry newEntry, Prompt newPrompt) 
 {   
-    // calling the random prompt for the user to answer
-    string promptToEntry = newPrompt.PromptRandom();
-    string answerToEntry = Console.ReadLine();
-    // Giving the format that needs to e
-    string promptAndAnswer = newEntry.StoringEntry(promptToEntry, answerToEntry);
+    // calling the random prompt for the user to answer and
+    // Passing to the Entry for the format
+    string prompt = newPrompt.PromptRandom();
+    string answer = Console.ReadLine();
+    newEntry._prompt = prompt;
+    newEntry._answer = answer;
+    string promptAndAnswer = newEntry._prompt + newEntry._answer;
+    return promptAndAnswer;
 }
 
-public void Display()
+public void Display(string promptAndAnswer)
 {
-    Console.WriteLine($"{_entries}");
+    foreach (Entry entry in _entries)
+    {
+        entry.Format();
+    }
+
 }
 
 public void LoadToFile()

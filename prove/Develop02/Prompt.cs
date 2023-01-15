@@ -17,7 +17,8 @@ public class Prompt
         Entry passToEntry = new Entry();
         Random random = new Random();
         int randomPrompt = random.Next(_prompts.Count);
-        Console.Write(_prompts[randomPrompt]);
-        return _prompts[randomPrompt];
+        passToEntry._prompt = _prompts[randomPrompt];
+        Console.WriteLine(_prompts[randomPrompt]);
+        return passToEntry._prompt;
     }
 }
