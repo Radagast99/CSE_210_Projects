@@ -1,0 +1,56 @@
+Instructions:
+Now that you have learned about the principle of encapsulation, and designed and developed a program using it, 
+return to I-Learn and answer the following question (the way you would in a job interview):
+
+// Question to answer.
+What is encapsulation and why is it important?
+
+// Answer development.
+Our age is surrounded by technology, which has enable the mankind to create services taht were never imagined before,
+some examples are: making purchases online, participating in clinical research remotely, handling our bank transactions
+in the website on the internet. 
+
+With this comes the security and data input from our end and the law requires the programs, apps, websites to have a proper 
+usage of the customers information that can be sensitive. By making our program with the encapsulation, programmers can 
+fulfill this proper data handeling, by writing the code in a way that is hermetic within the same class that was included
+prohibing the access for another class or function and making those to ask for permission.
+
+By writing an encasulated code, programs will be even more flexible allowing to be editted in an easier way.
+This works to avoid the date to be shown in another part that in the program that it should supposed to be showing.
+Please look at the following example:
+    using System;
+
+    public class fraction
+    {
+        private int _top = 0;
+        private int _bottom = 0;
+
+        public fraction() 
+        {
+            _top = 1;
+            _bottom = 1;
+        }
+
+        public fraction(int wholeNumber)
+        {
+            _top = wholeNumber;
+            _bottom = 1;
+        }
+
+        public fraction(int top, int bottom)
+        {
+            _top = top;
+            _bottom = bottom;
+        }
+
+        public string GetFractionString() 
+        {
+            string fraction = $"{_top}/{_bottom}";
+            return fraction;
+        }
+
+        public double GetDecimalValue()
+        {
+            return (double)_top / (double)_bottom;
+        }
+    }
