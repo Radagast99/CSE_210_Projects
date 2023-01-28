@@ -60,14 +60,5 @@ public void SaveToFile()
     }
 }
 
-//public void EditFromFile()
-//{
-    
-//}
-
-//public void DeleteFromFile()
-//{
-    
-//}
 }
 
